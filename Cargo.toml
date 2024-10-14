@@ -1,0 +1,18 @@
+[package]
+name = "csv3"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.38"
+clap = { version = "4.5.20", features = ["derive"] }
+deunicode = "1.6.0"
+indicatif = "0.17.8"
+Inflector = "0.11.4"
+num_cpus = "1.16.0"
+polars = { version = "0.43.1", features = ["lazy", "csv"] }
+polars-io = { version = "0.43.1", features = ["csv"] }
+polars-ops = "0.43.1"
+polars-plan = { version = "0.43.1", features = ["string_encoding", "strings"] }
+threadpool = "1.8.1"
+csv = "1.3.0"

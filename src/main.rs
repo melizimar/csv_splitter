@@ -72,14 +72,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let input_file = args.input_file.clone();
 
-    // let file_name: String = args.input_file
-    //     .clone()
-    //     .file_stem()
-    //     .unwrap()
-    //     .to_str()
-    //     .unwrap()
-    //     .to_string();
-
     let mut transformations: HashMap<String, Vec<String>> = HashMap::new();
 
     if let Some(vec) = &args.to_uppercase {

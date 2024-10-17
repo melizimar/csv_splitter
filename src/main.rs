@@ -326,24 +326,3 @@ where
     Ok(counter)
 }
 
-// fn remove_accents_from_df(
-//     mut df: DataFrame,
-//     column_name: &str,
-// ) -> Result<DataFrame, Box<dyn Error>> {
-//     // Pegue a coluna desejada como uma série
-//     let col_series = df.column(column_name)?.str()?;
-
-//     // Remova acentos de cada valor na série
-//     let no_accents: Vec<Option<String>> = col_series
-//         .into_iter()
-//         .map(|opt_s| opt_s.map(deunicode)) // Remove acentos
-//         .collect();
-
-//     // Cria uma nova série com os valores sem acentos
-//     let new_series = Series::new(column_name.into(), no_accents);
-
-//     // Substitui a coluna antiga pela nova no DataFrame
-//     df.replace(column_name, new_series)?;
-
-//     Ok(df)
-// }

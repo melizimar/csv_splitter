@@ -11,7 +11,7 @@ use std::{
 };
 use std::{process, thread};
 
-use clap::Parser;
+use clap::{Parser, command, arg};
 use indicatif::{ProgressBar, ProgressStyle};
 use inflector::cases::titlecase::to_title_case;
 
@@ -19,6 +19,7 @@ use inflector::cases::titlecase::to_title_case;
 #[derive(Parser, Debug)]
 #[command(
     name = "csv_splitter",
+    version = "1.0",
     about = "csv_splitter uma ferramenta para dividir arquivos csv em outros arquivos menores"
 )]
 struct Args {
@@ -53,6 +54,7 @@ struct Args {
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Args::parse();
+    
     // Abre o arquivo
     let metadata = std::fs::metadata(args.input_file.clone())?;
 
